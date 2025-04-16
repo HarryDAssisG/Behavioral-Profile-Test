@@ -6,7 +6,7 @@ function get_response() {
         Cat: 0
     };
   
-    for (let i = 1; i <= 10; i++) {
+    for (let i = 1; i <= 4; i++) {
       const opcoes = document.getElementsByName(`question${i}`);
       let respondeu = false;
   
@@ -25,11 +25,11 @@ function get_response() {
     }
   
     // Exibir o resultado
-    let resultado = 'Pontuação final:\n';
+    resultado = ''
     for (const animal in pontuacoes) {
-      resultado += `${animal.charAt(0).toUpperCase() + animal.slice(1)}: ${pontuacoes[animal]} ponto(s)\n`;
+
+      resultado += `${animal.charAt(0).toUpperCase() + animal.slice(1)}: ${((pontuacoes[animal])*4)} % \n`;
     }
   
-    alert(resultado);
+    
   }
-  
